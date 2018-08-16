@@ -12,7 +12,6 @@ body {
     backface-visibility: hidden;
     margin-bottom: 6rem;
     text-align: center;
-
     &--main {
         display: block;
         font-size: 6rem;
@@ -22,11 +21,11 @@ body {
         animation-name: moveInLeft;
         animation-duration: 1s;
         animation-timing-function: ease-out;
-
         @include respond(phone) {
             letter-spacing: 1rem;
             text-indent: 1rem;
             font-size: 5rem;
+            padding-left: 1rem;
         }
     }
     &--sub {
@@ -36,9 +35,10 @@ body {
         letter-spacing: 1.75rem;
         padding-left: 1.75rem;
         animation: moveInRight 1s ease-out;
-
         @include respond(phone) {
-            letter-spacing: .5rem;
+            letter-spacing: .58rem;
+            text-indent: 0;
+            padding-left: .58rem;
         }
     }
 }
@@ -48,19 +48,18 @@ body {
     text-transform: uppercase;
     font-weight: 700;
     @include gradient-text;
-   letter-spacing: .2rem;
-   transition: all .2s;
-
-   @include respond(tab-port) {
+    letter-spacing: .2rem;
+    transition: all .2s;
+    @include respond(tab-port) {
         font-size: 3rem;
     }
     @include respond(phone) {
         font-size: 2.5rem;
     }
-   &:hover{
-       transform: skewY(2deg) skewX(15deg) scale(1.1);
-       text-shadow: .5rem 1rem 2rem rgba($color-black, .2)
-   }
+    &:hover {
+        transform: skewY(2deg) skewX(15deg) scale(1.1);
+        text-shadow: .5rem 1rem 2rem rgba($color-black, .2)
+    }
 }
 
 .heading-tertiary {
@@ -71,7 +70,7 @@ body {
 
 .paragraph {
     font-size: $default-font-size;
-    &:not(:last-child){
+    &:not(:last-child) {
         margin-bottom: 3rem;
     }
 }
